@@ -14,7 +14,11 @@ app.get("/", function(req,res) {
     res.sendFile(path.join(_dirname, "main.html"))
 });
 
+<<<<<<< HEAD
 app.get("/tables", function(req,res) {
+=======
+app.get("/table", function(req,res) {
+>>>>>>> main
     res.sendFile(path.join(_dirname, "tables.html"))
 });
 
