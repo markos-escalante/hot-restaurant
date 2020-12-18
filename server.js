@@ -14,12 +14,29 @@ app.get("/", function(req,res) {
     res.sendFile(path.join(_dirname, "main.html"))
 });
 
+<<<<<<< HEAD
+app.get("/tables", function(req,res) {
+=======
 app.get("/table", function(req,res) {
+>>>>>>> main
     res.sendFile(path.join(_dirname, "tables.html"))
 });
 
 app.get("/reservation", function(req,res) {
     res.sendFile(path.join(_dirname, "reservation.html"))
+});
+
+app.post("/tables", function(req, res) {
+
+  const newCustomer = req.body;
+
+  //newCustomer.routeName = newCustomer.name.replace(/\s+/g, "").toLowerCase();
+
+  console.log(newCustomer);
+
+  customers.push(newCustomer);
+
+  res.json(newCustomer);
 });
 
 app.listen(PORT, () => {
